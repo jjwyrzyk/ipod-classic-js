@@ -7,6 +7,8 @@ import * as Utils from 'utils';
 
 interface Props {
   songs: IpodApi.Song[];
+  inLibrary?: boolean;
+  showImages?: boolean;
 }
 
 const SongsView = ({ songs }: Props) => {

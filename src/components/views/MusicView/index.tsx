@@ -10,6 +10,7 @@ import {
   PlaylistsView,
   SearchView,
   ViewOptions,
+  SongsView,
 } from 'components/views';
 import { useMenuHideWindow, useMusicKit, useScrollHandler } from 'hooks';
 
@@ -24,6 +25,13 @@ const MusicView = () => {
         label: 'Cover Flow',
         viewId: ViewOptions.coverFlow.id,
         component: () => <CoverFlowView />,
+        preview: PREVIEW.MUSIC,
+      },
+      {
+        type: 'View',
+        label: 'Songs',
+        viewId: ViewOptions.artists.id,
+        component: () => <ArtistsView />,
         preview: PREVIEW.MUSIC,
       },
       {
